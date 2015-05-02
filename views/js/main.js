@@ -528,8 +528,9 @@ function updatePositions() {
   //reduce repeated code.
   var y = scrollY / 1250;
   var items = document.querySelectorAll('.mover');
+  var phase;
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin(y + (i % 5));
+    phase = Math.sin(y + (i % 5));
     items[i].style.left = items[i].basicLeft + (100 * phase)+ 'px';
   }
 
