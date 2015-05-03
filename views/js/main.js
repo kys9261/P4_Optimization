@@ -527,7 +527,7 @@ function updatePositions() {
   
   //reduce repeated code.
   var y = scrollY / 1250;
-  var items = document.querySelectorAll('.mover');
+  var items = document.getElementsByClassName('mover');
   var phase;
   for (var i = 0; i < items.length; i++) {
     phase = Math.sin(y + (i % 5));
@@ -551,7 +551,9 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+  //num is result of resoultion widh / elem.style.width;
+  var num = window.screen.availWidth / 73;
+  for (var i = 0; i < num; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
