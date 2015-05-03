@@ -11,6 +11,9 @@
 
 3. In pizza.html
    - Compressed 'pizzeria.jpg' image. 
+
+   In main.js
    - Added onScroll function and reduce repeated code in update Positions function.
    - Removed duplicate code in for loop (document.querySelectorAll(".randomPizzaContainer"))
    - Added switch statement in changePizzaSize function.
+   - Change all script 'querySelectorAll' to 'getElementsByClass' and 'querySelect' to 'getElementById'
