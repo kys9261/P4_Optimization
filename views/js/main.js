@@ -552,7 +552,7 @@ window.addEventListener('scroll', onScroll, false);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  //num is result of resoultion widh / elem.style.width;
+  //num is result of resoultion widh / elem.style.width * cols;
   var num = window.screen.availWidth / 73 * 8;
   for (var i = 0; i < num; i++) {
     var elem = document.createElement('img');
@@ -564,4 +564,5 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     document.getElementById("movingPizzas1").appendChild(elem);
   }
+  updatePositions();
 });
